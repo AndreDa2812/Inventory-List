@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory List</title>
+  <link rel="stylesheet" href="style.css">
+  <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+  <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+  </script>
+  <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+  </script>
+</head>
+<body>
+  <h1>Manažment inventára</h1>
+  <div id="container">
+  <section id="addNewInventoryForm">
+  <h2>Pridať nový inventár:
+  </h2>
+  <form id="inventoryInputForm" action="addInventory" method="post" name="inputForm">
+  <label for="InventoryLocationLabel">Lokácia:</label>
+  <input type="text" name="inventoryLocationInput" id="inventoryLocation" autocomplete="off">
+  <label for="inventoryNameLabel">Názov inventára:</label>
+  <input type="text" name="inventoryNameInput"  id="inventoryName" autocomplete="off">
+  <label for="invnetoryIDLabel">ID Inventára:</label>
+  <input type="text" name="inventoryIDInput" id="inventoryID" autocomplete="off">
+  <input type="button" id="submitButton" value="Uložiť inventár">
+  </section>
+  <section id="editInventoryForm">
+  <h2>Upraviť záznam:</h2>
+  <form id="inventoryEditForm" action="editInventory" method="post" name="editForm">
+  <label for="InventoryLocationLabelEdit">Nová lokácia:</label>
+  <input type="text" name="inventoryLocationEdit" id="inventoryLocationEdit" autocomplete="off">
+  <label for="inventoryNameLabelEdit">Názov inventára:</label>
+  <input type="text" name="inventoryNameEdit"  id="inventoryNameEdit" autocomplete="off">
+  <label for="invnetoryIDLabelEdit">ID Inventára:</label>
+  <input type="text" name="inventoryIDEdit" id="inventoryIDEdit" autocomplete="off">
+  <input type="button" id="editButton" value="Potvrdiť zmeny">
+  </form>
+  </section>
+  </div>
+  <h2>Inventárny zoznam:</h2>
+  <table id="inventoryTableHead" class="css-serial">
+      <th name="textTable" id="orderNumberTableHead" class="text-center">Poradové číslo</th>
+      <th name="textTable" id="locationTableHead" class="text-center">Lokácia</th>
+      <th name="textTable" id="inventoryNameTableHead" class="text-center">Názov inventára</th>
+      <th name="textTable" id="inventoryIDTablehead" class="text-center">ID inventára</th>
+      <th name="textTable" id="recordUpdateTableHead" class="text-center">Upraviť záznam</th>
+      <th name="textTable" id="recordDeleteTableHead" class="text-center">!!!Zmazať položku!!!</th>
+      <tbody id="tbody">
+      </tbody>
+    <tfoot></tfoot>
+  </table>
+<script src="app.js"></script>
+</body>
+</html>
