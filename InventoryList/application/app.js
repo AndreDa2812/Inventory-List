@@ -79,3 +79,6 @@ document.getElementById('submitButton').onclick = function (e) {
   console.log(deleteButtons);
   deleteRow();
 };
+
+//*missing function for uploading row data to "Upraviť záznam" after pressing button "Upraviť záznam"
+//!when adding new inventory after deleting of some row "Poradové číslo" is not updated according current order
